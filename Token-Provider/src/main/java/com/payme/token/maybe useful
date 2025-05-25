@@ -1,0 +1,10 @@
+  endpoints:
+    public-key: /public-key
+    user:
+      access-and-refresh-token: /user/access-refresh-token
+      access-token: /user/access-token
+      refresh-token: /user/refresh-token
+    service:
+      access-and-refresh-token: /service/access-refresh-token
+      access-token: /service/access-token
+      refresh-token: /service/refresh-token
