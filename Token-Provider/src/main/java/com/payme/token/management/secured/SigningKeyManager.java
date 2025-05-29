@@ -31,7 +31,7 @@ import java.util.*;
  *
  * @param <T> The concrete type of {@link PublicKeyRecord} used to store public key metadata.
  */
-@Component
+
 @Slf4j
 @RequiredArgsConstructor
 public class SigningKeyManager <T extends PublicKeyRecord>{

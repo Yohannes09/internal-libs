@@ -5,9 +5,9 @@
 
 	<parent>
 		<groupId>com.payme</groupId>
-		<artifactId>payment-libs</artifactId>
-		<version>1.0.0</version>
-		<relativePath>../</relativePath>
+		<artifactId>internal-libs</artifactId>
+		<version>1.0.1</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<dependencyManagement>
@@ -40,7 +40,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>22</java.version>
 	</properties>
 
 	<packaging>jar</packaging>
@@ -134,7 +134,9 @@
 							<artifactId>lombok</artifactId>
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
 			</plugin>
 
 			<plugin>

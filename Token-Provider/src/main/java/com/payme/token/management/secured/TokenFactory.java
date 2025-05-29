@@ -19,7 +19,7 @@ import java.util.Set;
 /**
  * Generates signed JWT tokens using the active signing key.
  */
-@Component
+
 @RequiredArgsConstructor
 public class TokenFactory<T extends PublicKeyRecord> {
     private final SigningKeyManager<T> signingKeyManager;
