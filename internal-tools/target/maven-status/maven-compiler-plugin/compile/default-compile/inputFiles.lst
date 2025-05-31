@@ -1,3 +1,4 @@
+/Users/yohannesmata/internal-libs/internal-tools/src/main/java/com/payme/internal/exception/BaseGlobalExceptionHandler.java
 /Users/yohannesmata/internal-libs/internal-tools/src/main/java/com/payme/internal/exception/ErrorResponse.java
 /Users/yohannesmata/internal-libs/internal-tools/src/main/java/com/payme/internal/exception/WebClientException.java
 /Users/yohannesmata/internal-libs/internal-tools/src/main/java/com/payme/internal/security/component/PublicKeyResolver/PublicKeyMetaData.java

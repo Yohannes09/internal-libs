@@ -9,5 +9,6 @@ public record ErrorResponse(
         LocalDateTime errorTimestamp,
         String message,
         int statusCode,
-        String requestPath
+        String requestPath,
+        Object validationErrors
 ) {}

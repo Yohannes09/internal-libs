@@ -4,7 +4,6 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.payme</groupId>
   <artifactId>internal-tools</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
@@ -14,7 +13,7 @@
     <groupId>com.payme</groupId>
     <artifactId>internal-libs</artifactId>
     <version>1.0.1</version>
-    <relativePath>../</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <properties>
@@ -89,6 +88,13 @@
       <version>5.10.2</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>io.sentry</groupId>
+      <artifactId>sentry-spring-boot-starter</artifactId>
+      <version>7.6.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>

@@ -8,6 +8,7 @@ com/payme/internal/security/component/PublicKeyResolver/PublicKeyResolver.class
 com/payme/internal/security/component/PublicKeyResolver/PublicKeyResolver$PublicKeyContainer$PublicKeyContainerBuilder.class
 com/payme/internal/security/model/UserTokenSubject$UserTokenSubjectBuilder.class
 com/payme/internal/security/component/helloworld.class
+com/payme/internal/exception/BaseGlobalExceptionHandler.class
 com/payme/internal/security/constant/TokenRecipient.class
 com/payme/internal/exception/ErrorResponse.class
 com/payme/internal/security/dto/PublicKeyResponseDto.class
