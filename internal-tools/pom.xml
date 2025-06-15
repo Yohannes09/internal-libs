@@ -4,17 +4,17 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>internal-tools</artifactId>
-  <version>1.0.0</version>
-  <packaging>jar</packaging>
-  <name>internal-tools</name>
-
   <parent>
     <groupId>com.payme</groupId>
     <artifactId>internal-libs</artifactId>
     <version>1.0.1</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
+
+  <artifactId>internal-tools</artifactId>
+  <version>1.0.1</version>
+  <packaging>jar</packaging>
+  <name>internal-tools</name>
 
   <properties>
     <java.version>21</java.version>

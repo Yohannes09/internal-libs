@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -108,7 +109,7 @@ public abstract class BaseGlobalExceptionHandler {
                 "Validation Failed.",
                 HttpStatus.BAD_REQUEST,
                 request,
-                errors
+                new HashMap<>(errors)
         );
 
     }

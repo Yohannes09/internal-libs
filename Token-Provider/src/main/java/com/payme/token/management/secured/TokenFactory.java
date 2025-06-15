@@ -67,9 +67,6 @@ public class TokenFactory<T extends PublicKeyRecord> {
         Instant issuedAt = Instant.now();
         Instant expiresAt = issuedAt.plus(Duration.ofMinutes(validityMinutes));
         PrivateKey privateKey = signingKeyManager.getActiveSigningKey();
-        SignatureAlgorithm signatureAlgorithm = signatureAlgorithmResolver(
-                signingKeyManager.getActivePublicKey().getSignatureAlgorithm()
-        );
 
         return Jwts.builder()
                 .setHeaderParam("kid", signingKeyManager.getActivePublicKey().getId())
@@ -77,7 +74,7 @@ public class TokenFactory<T extends PublicKeyRecord> {
                 .setSubject(tokenSubject.getUsernameOrId())
                 .setIssuedAt(Date.from(issuedAt))
                 .setExpiration(Date.from(expiresAt))
-                .signWith(privateKey, signatureAlgorithm)
+                .signWith(privateKey)
                 .compact();
 
     }
@@ -114,8 +111,8 @@ public class TokenFactory<T extends PublicKeyRecord> {
      * @param signingAlgorithm the name of the signing algorithm
      * @return the corresponding {@link SignatureAlgorithm}
      */
-    private SignatureAlgorithm signatureAlgorithmResolver(String signingAlgorithm){
-        return SignatureAlgorithm.forName(signingAlgorithm);
-    }
+//    private SignatureAlgorithm signatureAlgorithmResolver(String signingAlgorithm){
+//        return SignatureAlgorithm.forName(signingAlgorithm);
+//    }
 
 }
