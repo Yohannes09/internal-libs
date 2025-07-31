@@ -4,14 +4,21 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.payme</groupId>
+    <groupId>com.authmat</groupId>
     <artifactId>internal-libs</artifactId>
     <version>1.0.1</version>
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.4</version>
+    </parent>
+
     <modules>
-        <module>token-provider</module>
+        <module>Token-Provider</module>
         <module>internal-tools</module>
+        <module>Token-Validation</module>
     </modules>
 
     <distributionManagement>
@@ -21,4 +28,12 @@
             <url>https://maven.pkg.github.com/Yohannes09/internal-libs</url>
         </repository>
     </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
