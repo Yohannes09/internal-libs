@@ -1,6 +1,6 @@
-package com.payme.token.persistence;
+package com.authmat.token.persistence;
 
-import com.payme.token.model.PublicKeyRecord;
+import com.authmat.token.model.PublicKeyMetaData;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import java.util.List;
  * <p><strong>Implementations:</strong> The backing store may be in-memory, persistent,
  * or distributed depending on the application's needs and security posture.
  *
- * @see PublicKeyRecord
+ * @see PublicKeyMetaData
  */
 public interface PublicKeyHistory {
-    void addKey(PublicKeyRecord publicKeyRecord);
-    void addKeys(List<PublicKeyRecord> publicKeyRecords);
-    List<PublicKeyRecord> getKeyHistoryAscending();
+    void addKey(PublicKeyMetaData publicKeyMetaData);
+    void addKeys(List<PublicKeyMetaData> publicKeyMetaData);
+    List<PublicKeyMetaData> getKeyHistoryAscending();
 }
