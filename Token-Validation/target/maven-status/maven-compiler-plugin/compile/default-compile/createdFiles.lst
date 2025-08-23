@@ -1,0 +1,3 @@
+com/authmat/validator/TokenValidator.class
+com/authmat/validator/ServiceTokenValidator.class
+com/authmat/validator/TokenResolver.class
