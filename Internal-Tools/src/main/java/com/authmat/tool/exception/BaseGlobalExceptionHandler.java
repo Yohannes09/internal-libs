@@ -1,6 +1,5 @@
 package com.authmat.tool.exception;
 
-import io.sentry.Sentry;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -77,7 +76,6 @@ public abstract class BaseGlobalExceptionHandler {
     ){
         String requestUri = request.getRequestURI() != null ?
                 request.getRequestURI() : "N/A";
-        Sentry.captureException(exception);
 
         log.warn("404 Not Found: {}", requestUri);
 
@@ -119,8 +117,6 @@ public abstract class BaseGlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleAllUncaughtExceptions(
             Exception exception, HttpServletRequest request
     ){
-        Sentry.captureException(exception);
-
         log.error("Unhandled exception occurred: {}", exception);
 
         return generateErrorResponse(
