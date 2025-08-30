@@ -4,5 +4,5 @@ import java.util.Optional;
 
 @FunctionalInterface
 public interface PublicKeyResolver {
-    Optional<String> resolve();
+    Optional<String> resolve(String kid);
 }

@@ -1,5 +1,7 @@
 /Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/HelloWorld.java
 /Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/events/NewUserEvent.java
+/Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/events/PublicKeyRotationEvent.java
 /Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/exception/BaseGlobalExceptionHandler.java
 /Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/exception/ErrorResponse.java
+/Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/exception/FailedToInitializeException.java
 /Users/yohannesmata/DEVELOPMENT/internal-libs/Internal-Tools/src/main/java/com/authmat/tool/exception/WebClientException.java

@@ -52,8 +52,10 @@ public class SimpleJwtAuthenticationFilter extends OncePerRequestFilter {
             String token = TOKEN_RESOLVER.extractJwtFromRequest(request)
                     .orElseThrow(()-> new FailedAuthenticationException("Unable to extract a valid token from the request."));
 
+            String kid = TOKEN_RESOLVER.resolveHeader(token).getKeyId();
+
             String base64EncodedPK = publicKeyResolver
-                    .resolve()
+                    .resolve(kid)
                     .orElseThrow(() -> new InvalidPublicKeyException("Unable to resolve the active Public Key."));
 
             String algorithm = Optional.ofNullable(TOKEN_RESOLVER.resolveHeader(token).getAlgorithm())

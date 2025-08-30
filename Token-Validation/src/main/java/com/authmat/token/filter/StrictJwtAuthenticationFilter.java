@@ -59,8 +59,10 @@ public class StrictJwtAuthenticationFilter extends OncePerRequestFilter {
             String token = tokenResolver.extractJwtFromRequest(request)
                     .orElseThrow(()-> new FailedAuthenticationException("Unable to extract a valid token from the request."));
 
+            String kid = tokenResolver.resolveHeader(token).getKeyId();
+
             String base64EncodedPK = publicKeyResolver
-                    .resolve()
+                    .resolve(kid)
                     .orElseThrow(() -> new InvalidPublicKeyException("Unable to resolve the active Public Key."));
 
             String algorithm = Optional.ofNullable(tokenResolver.resolveHeader(token).getAlgorithm())
