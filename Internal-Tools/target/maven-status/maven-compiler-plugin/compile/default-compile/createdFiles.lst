@@ -1,8 +1,7 @@
 com/authmat/tool/exception/BaseGlobalExceptionHandler.class
 com/authmat/tool/exception/WebClientException.class
+com/authmat/tool/exception/UserNotFoundException.class
 com/authmat/tool/HelloWorld.class
 com/authmat/tool/exception/ErrorResponse$ErrorResponseBuilder.class
-com/authmat/tool/events/NewUserEvent.class
 com/authmat/tool/exception/ErrorResponse.class
-com/authmat/tool/events/PublicKeyRotationEvent.class
 com/authmat/tool/exception/FailedToInitializeException.class

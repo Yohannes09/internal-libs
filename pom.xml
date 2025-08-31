@@ -17,7 +17,7 @@
 
     <modules>
         <module>Internal-Tools</module>
-        <module>Token-Validation</module>
+        <module>authmat-lib</module>
     </modules>
 
     <properties>

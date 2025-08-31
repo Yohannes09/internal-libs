@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Internal-Tools/Internal-Tools.iml" filepath="$PROJECT_DIR$/Internal-Tools/Internal-Tools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Token-Validation/Token-Validation.iml" filepath="$PROJECT_DIR$/Token-Validation/Token-Validation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Token-Validation/authmat-lib.iml" filepath="$PROJECT_DIR$/Token-Validation/authmat-lib.iml" />
     </modules>
   </component>
 </project>
