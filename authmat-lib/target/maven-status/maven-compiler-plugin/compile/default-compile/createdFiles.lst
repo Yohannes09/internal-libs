@@ -10,7 +10,6 @@ com/authmat/model/AuthUser.class
 com/authmat/exception/InvalidPublicKeyException.class
 com/authmat/exception/FailedAuthenticationException.class
 com/authmat/validation/SecurityConstants.class
-com/authmat/test.class
 com/authmat/filter/SimpleJwtAuthenticationFilter.class
 com/authmat/model/publickey/PublicKeyMetadataImp.class
 com/authmat/events/NewUserEvent.class

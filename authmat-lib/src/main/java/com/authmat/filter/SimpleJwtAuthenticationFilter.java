@@ -12,7 +12,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
+import lombok.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,7 +26,7 @@ import java.security.Key;
 import java.util.Collections;
 import java.util.Set;
 
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class SimpleJwtAuthenticationFilter extends OncePerRequestFilter {
     private static final Logger LOGGER = LoggerFactory.getLogger(SimpleJwtAuthenticationFilter.class);
     private static final Logger AUDIT_LOGGER = LoggerFactory.getLogger("AUDIT");
@@ -35,11 +35,17 @@ public class SimpleJwtAuthenticationFilter extends OncePerRequestFilter {
     private final PublicKeyResolver publicKeyResolver;
     private final Set<String> excludedPaths;
 
+    public SimpleJwtAuthenticationFilter(PublicKeyResolver publicKeyResolver, Set<String> excludedPaths) {
+        this.publicKeyResolver = publicKeyResolver;
+        this.excludedPaths = excludedPaths;
+        logger.info("new instance created");
+    }
+
     @Override
     protected void doFilterInternal(
-            HttpServletRequest request,
-            HttpServletResponse response,
-            FilterChain filterChain
+            @NonNull HttpServletRequest request,
+            @NonNull HttpServletResponse response,
+            @NonNull FilterChain filterChain
     ) throws ServletException, IOException {
         try {
             logger.info("""
@@ -86,6 +92,11 @@ public class SimpleJwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         filterChain.doFilter(request, response);
+    }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request){
+        return false;
     }
 
     public Set<String> getExcludedPaths(){
