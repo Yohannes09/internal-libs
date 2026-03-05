@@ -17,6 +17,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
         <module name="Internal-Tools" />
+        <module name="internal-tools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Internal-Tools" options="-parameters" />
       <module name="authmat-lib" options="-parameters" />
+      <module name="internal-tools" options="-parameters" />
       <module name="token-provider" options="-parameters" />
     </option>
   </component>
